@@ -1,6 +1,6 @@
 # BaapErBank
 
 # login
-  email: admin@gmail.com
+  Email: admin@gmail.com
   
-  password: 1234
+  Password: 1234
