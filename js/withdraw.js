@@ -5,8 +5,11 @@ document.getElementById('withdraw-btn').addEventListener('click', function () {
     // get current balance 
     const previousBalance = document.getElementById('balance-total')
     const previousBalanceAmount = parseFloat(previousBalance.innerText)
-
-    if (previousBalanceAmount >= newWithdrawAmount) {
+    if(Number.isNaN(newWithdraw.value) === true || newWithdrawAmount
+        < 0) {
+            alert('Wrong Input...!!!')
+    }
+   else if (previousBalanceAmount >= newWithdrawAmount ) {
         // get previous total Withdraw
 
         const previousWithdraw = document.getElementById('withdraw-total')
@@ -18,8 +21,6 @@ document.getElementById('withdraw-btn').addEventListener('click', function () {
         previousWithdraw.innerText = updateTotalWithdraw
         // update balance 
         previousBalance.innerText = previousBalanceAmount - newWithdrawAmount
-
-
     }
     else {
         alert('Not enough balance, Please deposite...!!!')
