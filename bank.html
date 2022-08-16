@@ -22,7 +22,7 @@
           </div>
           <div class="px-8 py-8 bg-yellow-600 rounded-md drop-shadow-xl">
             <h1>Withdraw</h1>
-            <h3>$00</h3>
+            <h3>$<span id="withdraw-total">00</span></h3>
           </div>
           <div class="px-8 py-8 bg-blue-600 rounded-md drop-shadow-xl">
             <h1>Balance</h1>
@@ -36,7 +36,7 @@
             <h1 class="text-white text-2xl">Please Deposit</h1>
             <input
               id="deposite-input"
-              class="my-4 px-3 py-1 w-10/12"
+              class="my-4 px-3 py-1 w-10/12 rounded"
               type="text"
               placeholder="$ amount you want to deposite"
             />
@@ -51,12 +51,16 @@
           <div class="px-8 py-8 bg-purple-600 rounded-md drop-shadow-xl">
             <h1 class="text-white text-2xl">Please Withdraw</h1>
             <input
-              class="my-4 px-3 py-1 w-10/12"
+              id="withdraw-input"
+              class="my-4 px-3 py-1 w-10/12 rounded"
               type="text"
               placeholder="$ amount you want to withdraw"
             />
             <br />
-            <button class="bg-emerald-700 px-4 py-2 text-white rounded-md">
+            <button
+              id="withdraw-btn"
+              class="bg-emerald-700 px-4 py-2 text-white rounded-md"
+            >
               Withdraw
             </button>
           </div>
